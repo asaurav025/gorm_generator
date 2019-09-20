@@ -10,9 +10,9 @@ import (
 )
 
 // Generate generate model files according to their name
-func Generate(path string) {
+func Generate(modelPath, fileName string) {
 	modelList := []Model{}
-	yamlFile, err := ioutil.ReadFile("test.yaml")
+	yamlFile, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		panic(err)
 	}
@@ -27,7 +27,7 @@ func Generate(path string) {
 	}
 
 	for _, modelT := range modelList {
-		modelFilePath := fmt.Sprintf("%s/%s.go", path, modelT.Name)
+		modelFilePath := fmt.Sprintf("%s/%s.go", modelPath, modelT.Name)
 		f, err := os.Create(modelFilePath)
 		if err != nil {
 			panic(err)
