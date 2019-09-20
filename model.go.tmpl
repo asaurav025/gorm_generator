@@ -1,0 +1,9 @@
+package models
+
+type {{ .Name }} struct {
+    ID  uint  `gorm:"primary_key;AUTO_INCREMENT" json:"id" form:"id"`
+    {{range .ColumnList}}
+    {{- .Name }}     {{.DataType }}  `{{- if .GormTag -}}gorm:"{{- range .GormTag -}}{{- .Tag -}};{{- end -}}"{{- end -}}{{- if .JSONTag }} json:"{{- .JSONTag -}}" {{end }} {{- if .FormTag }}form:"{{- .FormTag -}}"{{ end }}`
+    {{ end }}
+
+}
