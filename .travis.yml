@@ -1,0 +1,10 @@
+language: go
+
+go:
+ - 1.12.x
+
+go_import_path: github.com/asaurav025/gorm_generator
+
+install: 
+ - go build .
+ 
