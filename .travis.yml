@@ -5,6 +5,7 @@ go:
 
 go_import_path: github.com/asaurav025/gorm_generator
 
-install: 
- - go build .
- 
+install: true
+
+script:
+  - env GO111MODULE=on go build

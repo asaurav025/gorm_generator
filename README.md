@@ -1,5 +1,6 @@
 # Gorm generator  
   
+[![Build Status](https://travis-ci.org/asaurav025/gorm_generator.svg?branch=master)](https://travis-ci.org/asaurav025/gorm_generator)
 This golang generate gorm model based on yaml file input.  
 
 ## Steps to generate model  
