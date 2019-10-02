@@ -10,7 +10,7 @@ This golang generate gorm model based on yaml file input.
 - Import the package [`github.com/asaurav025/gorm_generator`](https://github.com/asaurav025/gorm_generator " Gorm generator")  
 - Call `Generate()` function from your function, this function has two parameters `modelpath`: where to be model is to be generated, `filepath`: path/to/yamlfile  
 
-# TODO  
+## TODO  
 
 - Add support to more filetype such as `json` and `xml`.  
 - Look for better way to pass template to generate function, currently using utf-8 encoded format of template.  
